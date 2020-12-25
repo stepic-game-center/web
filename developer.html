@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <section class="develop" id="develop">
+    <section class="develop" style="height: 80vh;">
         <div class="develop-center">
             <div class="develop-right">
                 <h2 class="develop-title">
@@ -34,6 +34,32 @@
                         <li>给您的游戏上传一张封面图。</li>
                         <li>等待审核通过吧！</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="develop" style="height: 50vh;">
+        <div class="develop-center">
+            <div class="develop-right">
+                <h2 class="develop-title">
+                    要点
+                </h2>
+                <p class="develop-text">在您的游戏文件中加入该方法并在得分时调用此方法（python）：</p>
+            </div>
+            <div class="develop-left">
+                <div class="develop-content">
+
+                    <pre><code class='language-python' lang='python'>
+import configparser
+config = configparser.RawConfigParser()
+def write_score():
+    &#39;&#39;&#39;记录得分。XXXXXXX为您的游戏逻辑名&#39;&#39;&#39;
+    config.read(&#39;../config/user.ini&#39;, encoding=&#39;utf-8&#39;)
+    if config.has_section(&#39;Game&#39;):
+        config.set(&#39;Game&#39;, &#39;XXXXXXX_score&#39;, str(Score))
+        config.write(open(&#39;../config/user.ini&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;))
+                        </code></pre> 
                 </div>
             </div>
         </div>
