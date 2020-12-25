@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(cyan, transparent), linear-gradient(-45deg, magenta, transparent), linear-gradient(45deg, yellow, transparent);
+    background-attachment: fixed;
+}
+
+.page-head {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px) brightness(110%);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 800px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.login > a {
+    color: #000;
+    font-size: 12px;
+}
+
+.head-bottom {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.head-logo {
+    height: 80%;
+}
+
+.head-logo-img {
+    height: 100%;
+}
+
+.head-nav {
+    margin-left: 50px;
+}
+
+.head-nav > ul {
+    list-style: none;
+    display: flex;
+    align-self: flex-start;
+}
+
+.head-nav li {
+    font-size: 16px;
+    text-shadow: #fff 0 0 1px;
+    border-radius: 3px;
+}
+
+.head-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.062);
+}
+
+.head-nav a{
+    padding: 10px 30px;
+    color: #000;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.banner {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+.banner-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.banner-logo {
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.banner-logo-img {
+    height: 100%;
+}
+
+.banner-text {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 200;
+    text-shadow: rgba(0, 0, 0, 0.4) 0 0 1px;
+}
+
+.install {
+    display: block;
+    margin-top: 50px;
+}
+
+.install-link {
+    display: block;
+    text-transform: uppercase;
+    width: calc(100% - 25px);
+    padding: 15px 50px 15px 25px;
+    border-radius: 3px;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    background: linear-gradient(to right, #ffb764 50%, #ed2bff 100%);
+    background-size: 200%;
+    background-position: right 0;
+    transition: background-position 300ms ease-in;
+    text-decoration: none;
+}
+
+.install-link:hover {
+    background-position: 0 0;
+}
+
+.install-link:after {
+    background-image: url(https://media.st.dl.pinyuncloud.com/store/about/icon-windows.svg);
+    content: "";
+    background-position: top right;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 25px;
+}
+
+.banner-right {
+    width: 70%;
+}
+
+.banner-right-content {
+    width: 100%;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px) brightness(110%);
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.banner-right-show {
+    background-image: url(../img/banner.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+
+.learn-more-btn {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.learn-more-link {
+    color: #e0e0e0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.down-arrow {
+    display: block;
+    margin-top: 5px;
+}
+
+.down-arrow:after {
+    content: "";
+    border: solid #dbdbdb;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.gameshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.show-center {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: auto;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 3px;
+}
+
+.show-center > h3{
+    font-size: 45px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #fff;
+}
+
+.show-center > p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+}
+
+.show-ul {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.show-ul > .game {
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    backdrop-filter: blur(10px) brightness(110%);
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 400ms;
+}
+
+.show-ul > .game > img {
+    width: 100%;
+}
+
+.show-ul > .game-1 {
+    left: 100px;
+    top: 50px;
+    width: 150px;
+}
+
+.show-ul > .game-2 {
+    right: 200px;
+    bottom: 50px;
+    width: 90px;
+}
+
+.show-ul > .game-3 {
+    left: 200px;
+    bottom: 80px;
+    width: 110px;
+}
+
+.show-ul > .game-4 {
+    right: 180px;
+    top: 80px;
+    width: 170px;
+}
+
+.develop {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px) brightness(110%);
+}
+
+.develop-center {
+    width: 70%;
+    height: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+.develop-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.develop-title {
+    font-size: 45px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #000;
+}
+
+.develop-text {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #000;
+    font-weight: 200;
+}
+
+.develop-left {
+    width: 50%;
+}
+
+.develop-left-content {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.develop-left-show {
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/developer.gif);
+    background-position: center center;
+}
+
+.develop-link {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #2EBFFF;
+    display: block;
+    text-decoration: none;
+}
+
+.develop-link:after {
+    width: 40px;
+    display: inline-block;
+    text-align: left;
+    transition: padding 100ms ease-out, width 100ms ease-out;
+}
+
+.develop-link:after {
+    content: "➜";
+}
+
+.develop-link:hover:after {
+    width: 30px;
+    padding-left: 10px;
+}
+
+.develop-ul {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 40px;
+    letter-spacing: 3px;
+}
+
+.develop-ul > li {
+    margin-bottom: 10px;
+}
+
+.page-foot {
+    margin-top: 20px;
+    height: auto;
+}
+
+.foot-top {
+    text-align: center;
+}
+
+.foot-top > p {
+    display: block;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    color: #fff;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+
+.foot-bottom {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    overflow: hidden;
+}
