@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEPIC 开发者平台</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/dev-info.js"></script>
+
+</head>
+<body class="dev-body">
+
+    <header class="dev-head">
+        <div class="dev-inner">
+            <div class="head-nav">
+                <ul class="dev-ul">
+                    <li class="dev-logo">
+                        <img src="./img/logo2.png" alt="">
+                    </li>
+                    <li class="dev-li">
+                        <a href="#" class="link-game">游戏管理</a>
+                    </li>
+                    <li class="dev-li">
+                        <a href="#" class="link-info">修改个人资料</a>
+                    </li>
+                    <li class="dev-li">
+                        <a href="#" onclick="window.location.reload()">刷新页面</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dev-info">
+                <button class="dev-info-btn"></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="develop">
+        <div class="dev-inner">
+            <ul class="upload-form">
+                <p class="danger"></p>
+                <li class="info-item">
+                    <span>登录名：</span>
+                    <input type="text" name="dname" readonly>
+                </li>
+                <li class="info-item">
+                    <span>昵称：</span>
+                    <input type="text" name="dnick">
+                </li>
+                <li class="info-item">
+                    <span>手机号：</span>
+                    <input type="text" name="dphone">
+                </li>
+                <li class="info-item">
+                    <input type="submit" class="upload-btn" value="更新个人资料">
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

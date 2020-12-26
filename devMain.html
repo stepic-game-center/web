@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEPIC 开发者平台</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/dev-main.js"></script>
+
+</head>
+<body class="dev-body">
+
+    <header class="dev-head">
+        <div class="dev-inner">
+            <div class="head-nav">
+                <ul class="dev-ul">
+                    <li class="dev-logo">
+                        <img src="./img/logo2.png" alt="">
+                    </li>
+                    <li class="dev-li">
+                        <a href="#" class="link-game">游戏管理</a>
+                    </li>
+                    <li class="dev-li">
+                        <a href="#" class="link-info">修改个人资料</a>
+                    </li>
+                    <li class="dev-li">
+                        <a href="#" onclick="window.location.reload()">刷新页面</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dev-info">
+                <button class="dev-info-btn"></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="develop">
+        <div class="dev-inner">
+            <div class="dev-upload">
+                <div class="dev-upload-logo">
+                    <div class="upload-logo">
+                        <div class="upload-add">点击发布游戏</div>
+                    </div>
+                </div>
+                <div class="dev-upload-area">
+                    <div class="back-logo">➜</div>
+                    <form action="http://106.13.236.185:5000/api/game/upload" method="post" class="upload-form" enctype="multipart/form-data">
+                        <input type="hidden" name="dname">
+                        <p class="danger"></p>
+                        游戏名：<input type="text" name="gname" placeholder="游戏名">
+                        逻辑名：<input type="text" name="name" placeholder="游戏逻辑名">
+                        简介：<input type="text" name="note" placeholder="游戏简介">
+                        版本：<input type="text" name="version" placeholder="默认为1.0">
+                        <br>
+                        封面图片：<input type="file" name="image">
+                        游戏文件：<input type="file" name="game">
+                        <br>
+                        <input type="submit" id="submit" value="点击上传" class="upload-btn" onclick="return checkForm()">
+                    </form>
+                </div>
+            </div>
+            <div class="dev-done">
+                <h4>已推出的游戏：</h4>
+                <ul class="dev-game">
+                    <li class="dev-empty">您还没有推出过您制作的游戏呢。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
