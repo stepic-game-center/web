@@ -39,7 +39,7 @@
         </div>
     </section>
 
-    <section class="develop" style="height: 50vh;">
+    <section class="develop" style="height: 80vh;">
         <div class="develop-center">
             <div class="develop-right">
                 <h2 class="develop-title">
@@ -51,14 +51,21 @@
                 <div class="develop-content">
 
                     <pre><code class='language-python' lang='python'>
+import os
 import configparser
+import requests
+
 config = configparser.RawConfigParser()
-def write_score():
-    &#39;&#39;&#39;记录得分。XXXXXXX为您的游戏逻辑名&#39;&#39;&#39;
-    config.read(&#39;../config/user.ini&#39;, encoding=&#39;utf-8&#39;)
-    if config.has_section(&#39;Game&#39;):
-        config.set(&#39;Game&#39;, &#39;XXXXXXX_score&#39;, str(Score))
-        config.write(open(&#39;../config/user.ini&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;))
+
+#上传得分
+def send_score(game_score):
+    config.read('../config/user.ini', encoding='utf-8')
+    if config.has_section('User'):
+        name = os.path.basename(__file__).split('.')[0]
+        uname = config.get('User', 'username')
+        url = 'https://stepic-api.redcountry.top/api/score/add2'
+        data = {'name': name, 'uname': uname, 'score': game_score}
+        requests.post(url=url, data=data)                       
                         </code></pre> 
                 </div>
             </div>
