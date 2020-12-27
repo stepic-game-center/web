@@ -24,6 +24,19 @@ $(function () {
         }
     })
 
+    $.ajax({
+        type: 'post',
+        url: 'https://stepic-api.redcountry.top/api/developer/query_info',
+        data: {
+            dname: username
+        },
+        success: function (dev) {
+            if (dev['dnick'] != '') {
+                $('.dev-info-btn').text('欢迎你，开发者：' + dev['dnick'])
+            }
+        }
+    })
+
     $('.dev-upload-logo').click(function () {
         $('.dev-upload-logo').css({
             left: '-100%',
