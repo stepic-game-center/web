@@ -15,6 +15,9 @@ $(function () {
         success: function (dev) {
             $('input[name=dnick]').val(dev['dnick'])
             $('input[name=dphone]').val(dev['dphone'])
+            if (dev['dnick'] != '') {
+                $('.dev-info-btn').text('欢迎你，开发者：' + dev['dnick'])
+            }
         }
     })
 
