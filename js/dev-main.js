@@ -8,7 +8,7 @@ $(function () {
 
     $.ajax({
         type: 'post',
-        url: 'http://106.13.236.185:5000/api/game/query_upload',
+        url: 'https://stepic-api.redcountry.top/api/game/query_upload',
         data: {
             dname: username
         },

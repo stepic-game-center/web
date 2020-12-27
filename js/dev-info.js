@@ -8,7 +8,7 @@ $(function () {
 
     $.ajax({
         type: 'post',
-        url: 'http://106.13.236.185:5000/api/developer/query_info',
+        url: 'https://stepic-api.redcountry.top/api/developer/query_info',
         data: {
             dname: username
         },
@@ -24,7 +24,7 @@ $(function () {
         let dphone = $('input[name=dphone]').val()
         $.ajax({
             type: 'post',
-            url: 'http://106.13.236.185:5000/api/developer/update_info',
+            url: 'https://stepic-api.redcountry.top/api/developer/update_info',
             data: {
                 dname: dname,
                 dnick: dnick,
